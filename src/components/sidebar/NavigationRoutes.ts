@@ -38,6 +38,10 @@ export default {
           name: 'data-user',
           displayName: 'menu.dataUser',
         },
+        {
+          name: 'data-test',
+          displayName: 'menu.dataTest',
+        },
       ],
     },
     // {

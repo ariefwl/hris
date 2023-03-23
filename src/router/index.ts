@@ -63,6 +63,11 @@ const routes: Array<RouteRecordRaw> = [
               wikiLink: 'https://github.com/epicmaxco/vuestic-admin/wiki/Progress-Bars',
             },
           },
+          {
+            name: 'data-test',
+            path: 'data-test',
+            component: () => import('../pages/admin/user/Test.vue'),
+          },
         ],
       },
       // {
