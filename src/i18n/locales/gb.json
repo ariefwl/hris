@@ -291,6 +291,11 @@
     "persian": "Persian"
   },
   "menu": {
+    "master": "Master Data",
+    "dataKaryawan": "Data Karyawan",
+    "dataPerusahaan": "Data Perusahaan",
+    "dataUser": "Data User",
+
     "auth": "Auth",
     "rating": "Rating",
     "buttons": "Buttons",

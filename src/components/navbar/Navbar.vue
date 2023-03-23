@@ -13,7 +13,7 @@
         </router-link>
       </div>
     </template>
-    <template #center>
+    <!-- <template #center>
       <div class="app-navbar-center">
         <span class="app-navbar-center__text mr-2">{{ t('navbar.messageUs') }}</span>
         <a
@@ -34,7 +34,7 @@
           {{ t('navbar.repository') }}
         </va-button>
       </div>
-    </template>
+    </template> -->
     <template #right>
       <app-navbar-actions class="app-navbar__actions md5 lg4" :user-name="userName" />
     </template>

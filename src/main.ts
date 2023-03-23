@@ -2,11 +2,22 @@ import { createApp } from 'vue'
 import i18n from './i18n'
 import { createVuestic } from 'vuestic-ui'
 import { createGtm } from '@gtm-support/vue-gtm'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 import stores from './stores'
 import router from './router'
 import vuesticGlobalConfig from './services/vuestic-ui/global-config'
 import App from './App.vue'
+
+import 'datatables.net-bs5'
+// import 'datatables.net-bs5/css/dataTables.bootstrap5.min.css'
+import 'jszip'
+import 'pdfmake'
+import 'datatables.net-buttons-bs5/css/buttons.bootstrap5.min.css'
+import 'datatables.net-buttons/js/buttons.colVis'
+import 'datatables.net-buttons/js/buttons.flash'
+import 'datatables.net-buttons/js/buttons.html5'
+import 'datatables.net-buttons/js/buttons.print'
 
 const app = createApp(App)
 
