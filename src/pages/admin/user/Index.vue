@@ -37,7 +37,7 @@
     methods: {
       getUser() {
         axios
-          .get('http://api101.lapaksemarang.com/api/users')
+          .get('/api/users')
           .then((response) => {
             $('#tblUser').DataTable({
               data: response.data.data,

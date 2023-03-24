@@ -4,6 +4,10 @@ import { createVuestic } from 'vuestic-ui'
 import { createGtm } from '@gtm-support/vue-gtm'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
+// import axios from 'axios'
+// axios.defaults.withCredentials = true
+// axios.defaults.baseURL = 'http://api.jansenindonesia.com/'
+
 import stores from './stores'
 import router from './router'
 import vuesticGlobalConfig from './services/vuestic-ui/global-config'
