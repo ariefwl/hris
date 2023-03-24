@@ -34,7 +34,7 @@
     methods: {
       getUser() {
         axios
-          .get('http://api.jansenindonesia.com/api')
+          .get('http://api.jansenindonesia.com/api/list')
           .then((response) => {
             $('#tblUser').DataTable({
               data: response.data.data,

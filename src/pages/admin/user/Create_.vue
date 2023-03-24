@@ -6,8 +6,8 @@
           <h1 class="mb-5">Create User</h1>
           <form>
             <div class="form-floating mb-3">
-              <input id="name" v-model="dataUser.name" type="text" class="form-control" placeholder="Fullname" />
-              <label for="name">Fullname</label>
+              <input id="uname" v-model="dataUser.uname" type="text" class="form-control" placeholder="Username" />
+              <label for="uname">Username</label>
             </div>
             <div class="form-floating mb-3">
               <input
@@ -28,6 +28,10 @@
                 placeholder="Password"
               />
               <label for="password">Password</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input id="name" v-model="dataUser.name" type="text" class="form-control" placeholder="Fullname" />
+              <label for="name">Fullname</label>
             </div>
             <button type="submit" class="btn btn-outline-primary" @click.prevent="simpan()">Simpan</button>
           </form>
@@ -60,7 +64,7 @@
     data() {
       return {
         dataUser: {
-          // uname: '',
+          uname: '',
           email: '',
           password: '',
           name: '',
@@ -70,8 +74,7 @@
     methods: {
       simpan() {
         axios
-          // .post('https://api101.lapaksemarang.com/api/users', this.dataUser)
-          .post('https://api.jansenindonesia.com/api/register', this.dataUser)
+          .post('https://api101.lapaksemarang.com/api/users', this.dataUser)
           .then((response) => {
             console.log(response.data)
             // router.push({ name: 'data-user' })
