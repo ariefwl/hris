@@ -58,7 +58,7 @@ const routes: Array<RouteRecordRaw> = [
           {
             name: 'data-user',
             path: 'data-user',
-            component: () => import('../pages/admin/user/Index.vue'),
+            component: () => import('../pages/admin/user/Test.vue'),
             meta: {
               wikiLink: 'https://github.com/epicmaxco/vuestic-admin/wiki/Progress-Bars',
             },

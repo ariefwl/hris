@@ -6,8 +6,8 @@
           <h1 class="mb-5">Create User</h1>
           <form>
             <div class="form-floating mb-3">
-              <input id="uname" v-model="dataUser.uname" type="text" class="form-control" placeholder="Username" />
-              <label for="uname">Username</label>
+              <input id="name" v-model="dataUser.name" type="text" class="form-control" placeholder="Fullname" />
+              <label for="name">Fullname</label>
             </div>
             <div class="form-floating mb-3">
               <input
@@ -30,8 +30,14 @@
               <label for="password">Password</label>
             </div>
             <div class="form-floating mb-3">
-              <input id="name" v-model="dataUser.name" type="text" class="form-control" placeholder="Fullname" />
-              <label for="name">Fullname</label>
+              <input
+                id="conf_password"
+                v-model="dataUser.confirm_password"
+                type="password"
+                class="form-control"
+                placeholder="Confirm Password"
+              />
+              <label for="conf_password">Confirm Password</label>
             </div>
             <button type="submit" class="btn btn-outline-primary" @click.prevent="simpan()">Simpan</button>
           </form>
@@ -59,25 +65,27 @@
   //         return Promise.reject(error);
   //     }
   // );
-  // const router = useRouter();
+  const router = useRouter()
   export default {
     data() {
       return {
         dataUser: {
-          uname: '',
+          // uname: '',
           email: '',
           password: '',
           name: '',
+          confirm_password: '',
         },
       }
     },
     methods: {
       simpan() {
         axios
-          .post('https://api101.lapaksemarang.com/api/users', this.dataUser)
+          // .post('https://api101.lapaksemarang.com/api/users', this.dataUser)
+          .post('http://api.jansenindonesia.com/api/register', this.dataUser)
           .then((response) => {
             console.log(response.data)
-            // router.push({ name: 'data-user' })
+            this.$router.push({ name: 'data-user' })
           })
           .catch((err) => {
             console.log(err.response.data)
